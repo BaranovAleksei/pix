@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>PIXTURE</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+	
+	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+	<style>@charset "UTF-8";.fa.fa-pull-left,.fa.pull-left{margin-right:.3em}.fa-fw,.fa-li{text-align:center}.fa-inverse,body{color:#fff}.owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}.owl-carousel{display:none;width:100%;z-index:1}.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y}.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0)}.owl-carousel .owl-item{min-height:1px;float:left;-webkit-backface-visibility:hidden;-webkit-touch-callout:none}.owl-carousel .owl-item img{display:block;width:100%;-webkit-transform-style:preserve-3d}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;cursor:hand;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-loaded{display:block}.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{display:none}.owl-carousel.owl-drag .owl-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-grab{cursor:move;cursor:-webkit-grab;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}.no-js .owl-carousel{display:block}.owl-carousel .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}.owl-carousel .owl-animated-out{z-index:1}.owl-carousel .fadeOut{-webkit-animation-name:fadeOut;animation-name:fadeOut}@-webkit-keyframes fadeOut{0%{opacity:1}100%{opacity:0}}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.owl-height{-webkit-transition:height .5s ease-in-out;transition:height .5s ease-in-out}.owl-carousel .owl-item .owl-lazy{opacity:0;-webkit-transition:opacity .4s ease;transition:opacity .4s ease}.owl-carousel .owl-item img.owl-lazy{-webkit-transform-style:preserve-3d;transform-style:preserve-3d}.owl-carousel .owl-video-wrapper{position:relative;height:100%;background:#000}.owl-carousel .owl-video-play-icon{position:absolute;height:80px;width:80px;left:50%;top:50%;margin-left:-40px;margin-top:-40px;background:url(owl.video.play.png) no-repeat;cursor:pointer;z-index:1;-webkit-backface-visibility:hidden;-webkit-transition:-webkit-transform .1s ease;transition:-webkit-transform .1s ease;transition:transform .1s ease}.owl-carousel .owl-video-play-icon:hover{-webkit-transform:scale(1.3,1.3);-ms-transform:scale(1.3,1.3);transform:scale(1.3,1.3)}.owl-carousel .owl-video-playing .owl-video-play-icon,.owl-carousel .owl-video-playing .owl-video-tn{display:none}.fa,.fa-stack{display:inline-block}.owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;-webkit-transition:opacity .4s ease;transition:opacity .4s ease}.owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}/*!
+ *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.6.3);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format("embedded-opentype"),url(../fonts/fontawesome-webfont.woff2?v=4.6.3) format("woff2"),url(../fonts/fontawesome-webfont.woff?v=4.6.3) format("woff"),url(../fonts/fontawesome-webfont.ttf?v=4.6.3) format("truetype"),url(../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular) format("svg");font-weight:400;font-style:normal}.fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571em}.fa-ul{padding-left:0;margin-left:2.14286em;list-style-type:none}.fa.fa-pull-right,.fa.pull-right{margin-left:.3em}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14286em;width:2.14286em;top:.14286em}.fa-li.fa-lg{left:-1.85714em}.fa-border{padding:.2em .25em .15em;border:.08em solid #eee;-webkit-border-radius:.1em;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right,.pull-right{float:right}.pull-left{float:left}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";-webkit-transform:scale(-1,1);-ms-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";-webkit-transform:scale(1,-1);-ms-transform:scale(1,-1);transform:scale(1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{position:relative;width:2em;height:2em;line-height:2em;vertical-align:middle}.hidden,.owl-next,.owl-prev{display:none}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-glass:before{content:""}.fa-music:before{content:""}.fa-search:before{content:""}.fa-envelope-o:before{content:""}.fa-heart:before{content:""}.fa-star:before{content:""}.fa-star-o:before{content:""}.fa-user:before{content:""}.fa-film:before{content:""}.fa-th-large:before{content:""}.fa-th:before{content:""}.fa-th-list:before{content:""}.fa-check:before{content:""}.fa-close:before,.fa-remove:before,.fa-times:before{content:""}.fa-search-plus:before{content:""}.fa-search-minus:before{content:""}.fa-power-off:before{content:""}.fa-signal:before{content:""}.fa-cog:before,.fa-gear:before{content:""}.fa-trash-o:before{content:""}.fa-home:before{content:""}.fa-file-o:before{content:""}.fa-clock-o:before{content:""}.fa-road:before{content:""}.fa-download:before{content:""}.fa-arrow-circle-o-down:before{content:""}.fa-arrow-circle-o-up:before{content:""}.fa-inbox:before{content:""}.fa-play-circle-o:before{content:""}.fa-repeat:before,.fa-rotate-right:before{content:""}.fa-refresh:before{content:""}.fa-list-alt:before{content:""}.fa-lock:before{content:""}.fa-flag:before{content:""}.fa-headphones:before{content:""}.fa-volume-off:before{content:""}.fa-volume-down:before{content:""}.fa-volume-up:before{content:""}.fa-qrcode:before{content:""}.fa-barcode:before{content:""}.fa-tag:before{content:""}.fa-tags:before{content:""}.fa-book:before{content:""}.fa-bookmark:before{content:""}.fa-print:before{content:""}.fa-camera:before{content:""}.fa-font:before{content:""}.fa-bold:before{content:""}.fa-italic:before{content:""}.fa-text-height:before{content:""}.fa-text-width:before{content:""}.fa-align-left:before{content:""}.fa-align-center:before{content:""}.fa-align-right:before{content:""}.fa-align-justify:before{content:""}.fa-list:before{content:""}.fa-dedent:before,.fa-outdent:before{content:""}.fa-indent:before{content:""}.fa-video-camera:before{content:""}.fa-image:before,.fa-photo:before,.fa-picture-o:before{content:""}.fa-pencil:before{content:""}.fa-map-marker:before{content:""}.fa-adjust:before{content:""}.fa-tint:before{content:""}.fa-edit:before,.fa-pencil-square-o:before{content:""}.fa-share-square-o:before{content:""}.fa-check-square-o:before{content:""}.fa-arrows:before{content:""}.fa-step-backward:before{content:""}.fa-fast-backward:before{content:""}.fa-backward:before{content:""}.fa-play:before{content:""}.fa-pause:before{content:""}.fa-stop:before{content:""}.fa-forward:before{content:""}.fa-fast-forward:before{content:""}.fa-step-forward:before{content:""}.fa-eject:before{content:""}.fa-chevron-left:before{content:""}.fa-chevron-right:before{content:""}.fa-plus-circle:before{content:""}.fa-minus-circle:before{content:""}.fa-times-circle:before{content:""}.fa-check-circle:before{content:""}.fa-question-circle:before{content:""}.fa-info-circle:before{content:""}.fa-crosshairs:before{content:""}.fa-times-circle-o:before{content:""}.fa-check-circle-o:before{content:""}.fa-ban:before{content:""}.fa-arrow-left:before{content:""}.fa-arrow-right:before{content:""}.fa-arrow-up:before{content:""}.fa-arrow-down:before{content:""}.fa-mail-forward:before,.fa-share:before{content:""}.fa-expand:before{content:""}.fa-compress:before{content:""}.fa-plus:before{content:""}.fa-minus:before{content:""}.fa-asterisk:before{content:""}.fa-exclamation-circle:before{content:""}.fa-gift:before{content:""}.fa-leaf:before{content:""}.fa-fire:before{content:""}.fa-eye:before{content:""}.fa-eye-slash:before{content:""}.fa-exclamation-triangle:before,.fa-warning:before{content:""}.fa-plane:before{content:""}.fa-calendar:before{content:""}.fa-random:before{content:""}.fa-comment:before{content:""}.fa-magnet:before{content:""}.fa-chevron-up:before{content:""}.fa-chevron-down:before{content:""}.fa-retweet:before{content:""}.fa-shopping-cart:before{content:""}.fa-folder:before{content:""}.fa-folder-open:before{content:""}.fa-arrows-v:before{content:""}.fa-arrows-h:before{content:""}.fa-bar-chart-o:before,.fa-bar-chart:before{content:""}.fa-twitter-square:before{content:""}.fa-facebook-square:before{content:""}.fa-camera-retro:before{content:""}.fa-key:before{content:""}.fa-cogs:before,.fa-gears:before{content:""}.fa-comments:before{content:""}.fa-thumbs-o-up:before{content:""}.fa-thumbs-o-down:before{content:""}.fa-star-half:before{content:""}.fa-heart-o:before{content:""}.fa-sign-out:before{content:""}.fa-linkedin-square:before{content:""}.fa-thumb-tack:before{content:""}.fa-external-link:before{content:""}.fa-sign-in:before{content:""}.fa-trophy:before{content:""}.fa-github-square:before{content:""}.fa-upload:before{content:""}.fa-lemon-o:before{content:""}.fa-phone:before{content:""}.fa-square-o:before{content:""}.fa-bookmark-o:before{content:""}.fa-phone-square:before{content:""}.fa-twitter:before{content:""}.fa-facebook-f:before,.fa-facebook:before{content:""}.fa-github:before{content:""}.fa-unlock:before{content:""}.fa-credit-card:before{content:""}.fa-feed:before,.fa-rss:before{content:""}.fa-hdd-o:before{content:""}.fa-bullhorn:before{content:""}.fa-bell:before{content:""}.fa-certificate:before{content:""}.fa-hand-o-right:before{content:""}.fa-hand-o-left:before{content:""}.fa-hand-o-up:before{content:""}.fa-hand-o-down:before{content:""}.fa-arrow-circle-left:before{content:""}.fa-arrow-circle-right:before{content:""}.fa-arrow-circle-up:before{content:""}.fa-arrow-circle-down:before{content:""}.fa-globe:before{content:""}.fa-wrench:before{content:""}.fa-tasks:before{content:""}.fa-filter:before{content:""}.fa-briefcase:before{content:""}.fa-arrows-alt:before{content:""}.fa-group:before,.fa-users:before{content:""}.fa-chain:before,.fa-link:before{content:""}.fa-cloud:before{content:""}.fa-flask:before{content:""}.fa-cut:before,.fa-scissors:before{content:""}.fa-copy:before,.fa-files-o:before{content:""}.fa-paperclip:before{content:""}.fa-floppy-o:before,.fa-save:before{content:""}.fa-square:before{content:""}.fa-bars:before,.fa-navicon:before,.fa-reorder:before{content:""}.fa-list-ul:before{content:""}.fa-list-ol:before{content:""}.fa-strikethrough:before{content:""}.fa-underline:before{content:""}.fa-table:before{content:""}.fa-magic:before{content:""}.fa-truck:before{content:""}.fa-pinterest:before{content:""}.fa-pinterest-square:before{content:""}.fa-google-plus-square:before{content:""}.fa-google-plus:before{content:""}.fa-money:before{content:""}.fa-caret-down:before{content:""}.fa-caret-up:before{content:""}.fa-caret-left:before{content:""}.fa-caret-right:before{content:""}.fa-columns:before{content:""}.fa-sort:before,.fa-unsorted:before{content:""}.fa-sort-desc:before,.fa-sort-down:before{content:""}.fa-sort-asc:before,.fa-sort-up:before{content:""}.fa-envelope:before{content:""}.fa-linkedin:before{content:""}.fa-rotate-left:before,.fa-undo:before{content:""}.fa-gavel:before,.fa-legal:before{content:""}.fa-dashboard:before,.fa-tachometer:before{content:""}.fa-comment-o:before{content:""}.fa-comments-o:before{content:""}.fa-bolt:before,.fa-flash:before{content:""}.fa-sitemap:before{content:""}.fa-umbrella:before{content:""}.fa-clipboard:before,.fa-paste:before{content:""}.fa-lightbulb-o:before{content:""}.fa-exchange:before{content:""}.fa-cloud-download:before{content:""}.fa-cloud-upload:before{content:""}.fa-user-md:before{content:""}.fa-stethoscope:before{content:""}.fa-suitcase:before{content:""}.fa-bell-o:before{content:""}.fa-coffee:before{content:""}.fa-cutlery:before{content:""}.fa-file-text-o:before{content:""}.fa-building-o:before{content:""}.fa-hospital-o:before{content:""}.fa-ambulance:before{content:""}.fa-medkit:before{content:""}.fa-fighter-jet:before{content:""}.fa-beer:before{content:""}.fa-h-square:before{content:""}.fa-plus-square:before{content:""}.fa-angle-double-left:before{content:""}.fa-angle-double-right:before{content:""}.fa-angle-double-up:before{content:""}.fa-angle-double-down:before{content:""}.fa-angle-left:before{content:""}.fa-angle-right:before{content:""}.fa-angle-up:before{content:""}.fa-angle-down:before{content:""}.fa-desktop:before{content:""}.fa-laptop:before{content:""}.fa-tablet:before{content:""}.fa-mobile-phone:before,.fa-mobile:before{content:""}.fa-circle-o:before{content:""}.fa-quote-left:before{content:""}.fa-quote-right:before{content:""}.fa-spinner:before{content:""}.fa-circle:before{content:""}.fa-mail-reply:before,.fa-reply:before{content:""}.fa-github-alt:before{content:""}.fa-folder-o:before{content:""}.fa-folder-open-o:before{content:""}.fa-smile-o:before{content:""}.fa-frown-o:before{content:""}.fa-meh-o:before{content:""}.fa-gamepad:before{content:""}.fa-keyboard-o:before{content:""}.fa-flag-o:before{content:""}.fa-flag-checkered:before{content:""}.fa-terminal:before{content:""}.fa-code:before{content:""}.fa-mail-reply-all:before,.fa-reply-all:before{content:""}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:""}.fa-location-arrow:before{content:""}.fa-crop:before{content:""}.fa-code-fork:before{content:""}.fa-chain-broken:before,.fa-unlink:before{content:""}.fa-question:before{content:""}.fa-info:before{content:""}.fa-exclamation:before{content:""}.fa-superscript:before{content:""}.fa-subscript:before{content:""}.fa-eraser:before{content:""}.fa-puzzle-piece:before{content:""}.fa-microphone:before{content:""}.fa-microphone-slash:before{content:""}.fa-shield:before{content:""}.fa-calendar-o:before{content:""}.fa-fire-extinguisher:before{content:""}.fa-rocket:before{content:""}.fa-maxcdn:before{content:""}.fa-chevron-circle-left:before{content:""}.fa-chevron-circle-right:before{content:""}.fa-chevron-circle-up:before{content:""}.fa-chevron-circle-down:before{content:""}.fa-html5:before{content:""}.fa-css3:before{content:""}.fa-anchor:before{content:""}.fa-unlock-alt:before{content:""}.fa-bullseye:before{content:""}.fa-ellipsis-h:before{content:""}.fa-ellipsis-v:before{content:""}.fa-rss-square:before{content:""}.fa-play-circle:before{content:""}.fa-ticket:before{content:""}.fa-minus-square:before{content:""}.fa-minus-square-o:before{content:""}.fa-level-up:before{content:""}.fa-level-down:before{content:""}.fa-check-square:before{content:""}.fa-pencil-square:before{content:""}.fa-external-link-square:before{content:""}.fa-share-square:before{content:""}.fa-compass:before{content:""}.fa-caret-square-o-down:before,.fa-toggle-down:before{content:""}.fa-caret-square-o-up:before,.fa-toggle-up:before{content:""}.fa-caret-square-o-right:before,.fa-toggle-right:before{content:""}.fa-eur:before,.fa-euro:before{content:""}.fa-gbp:before{content:""}.fa-dollar:before,.fa-usd:before{content:""}.fa-inr:before,.fa-rupee:before{content:""}.fa-cny:before,.fa-jpy:before,.fa-rmb:before,.fa-yen:before{content:""}.fa-rouble:before,.fa-rub:before,.fa-ruble:before{content:""}.fa-krw:before,.fa-won:before{content:""}.fa-bitcoin:before,.fa-btc:before{content:""}.fa-file:before{content:""}.fa-file-text:before{content:""}.fa-sort-alpha-asc:before{content:""}.fa-sort-alpha-desc:before{content:""}.fa-sort-amount-asc:before{content:""}.fa-sort-amount-desc:before{content:""}.fa-sort-numeric-asc:before{content:""}.fa-sort-numeric-desc:before{content:""}.fa-thumbs-up:before{content:""}.fa-thumbs-down:before{content:""}.fa-youtube-square:before{content:""}.fa-youtube:before{content:""}.fa-xing:before{content:""}.fa-xing-square:before{content:""}.fa-youtube-play:before{content:""}.fa-dropbox:before{content:""}.fa-stack-overflow:before{content:""}.fa-instagram:before{content:""}.fa-flickr:before{content:""}.fa-adn:before{content:""}.fa-bitbucket:before{content:""}.fa-bitbucket-square:before{content:""}.fa-tumblr:before{content:""}.fa-tumblr-square:before{content:""}.fa-long-arrow-down:before{content:""}.fa-long-arrow-up:before{content:""}.fa-long-arrow-left:before{content:""}.fa-long-arrow-right:before{content:""}.fa-apple:before{content:""}.fa-windows:before{content:""}.fa-android:before{content:""}.fa-linux:before{content:""}.fa-dribbble:before{content:""}.fa-skype:before{content:""}.fa-foursquare:before{content:""}.fa-trello:before{content:""}.fa-female:before{content:""}.fa-male:before{content:""}.fa-gittip:before,.fa-gratipay:before{content:""}.fa-sun-o:before{content:""}.fa-moon-o:before{content:""}.fa-archive:before{content:""}.fa-bug:before{content:""}.fa-vk:before{content:""}.fa-weibo:before{content:""}.fa-renren:before{content:""}.fa-pagelines:before{content:""}.fa-stack-exchange:before{content:""}.fa-arrow-circle-o-right:before{content:""}.fa-arrow-circle-o-left:before{content:""}.fa-caret-square-o-left:before,.fa-toggle-left:before{content:""}.fa-dot-circle-o:before{content:""}.fa-wheelchair:before{content:""}.fa-vimeo-square:before{content:""}.fa-try:before,.fa-turkish-lira:before{content:""}.fa-plus-square-o:before{content:""}.fa-space-shuttle:before{content:""}.fa-slack:before{content:""}.fa-envelope-square:before{content:""}.fa-wordpress:before{content:""}.fa-openid:before{content:""}.fa-bank:before,.fa-institution:before,.fa-university:before{content:""}.fa-graduation-cap:before,.fa-mortar-board:before{content:""}.fa-yahoo:before{content:""}.fa-google:before{content:""}.fa-reddit:before{content:""}.fa-reddit-square:before{content:""}.fa-stumbleupon-circle:before{content:""}.fa-stumbleupon:before{content:""}.fa-delicious:before{content:""}.fa-digg:before{content:""}.fa-pied-piper-pp:before{content:""}.fa-pied-piper-alt:before{content:""}.fa-drupal:before{content:""}.fa-joomla:before{content:""}.fa-language:before{content:""}.fa-fax:before{content:""}.fa-building:before{content:""}.fa-child:before{content:""}.fa-paw:before{content:""}.fa-spoon:before{content:""}.fa-cube:before{content:""}.fa-cubes:before{content:""}.fa-behance:before{content:""}.fa-behance-square:before{content:""}.fa-steam:before{content:""}.fa-steam-square:before{content:""}.fa-recycle:before{content:""}.fa-automobile:before,.fa-car:before{content:""}.fa-cab:before,.fa-taxi:before{content:""}.fa-tree:before{content:""}.fa-spotify:before{content:""}.fa-deviantart:before{content:""}.fa-soundcloud:before{content:""}.fa-database:before{content:""}.fa-file-pdf-o:before{content:""}.fa-file-word-o:before{content:""}.fa-file-excel-o:before{content:""}.fa-file-powerpoint-o:before{content:""}.fa-file-image-o:before,.fa-file-photo-o:before,.fa-file-picture-o:before{content:""}.fa-file-archive-o:before,.fa-file-zip-o:before{content:""}.fa-file-audio-o:before,.fa-file-sound-o:before{content:""}.fa-file-movie-o:before,.fa-file-video-o:before{content:""}.fa-file-code-o:before{content:""}.fa-vine:before{content:""}.fa-codepen:before{content:""}.fa-jsfiddle:before{content:""}.fa-life-bouy:before,.fa-life-buoy:before,.fa-life-ring:before,.fa-life-saver:before,.fa-support:before{content:""}.fa-circle-o-notch:before{content:""}.fa-ra:before,.fa-rebel:before,.fa-resistance:before{content:""}.fa-empire:before,.fa-ge:before{content:""}.fa-git-square:before{content:""}.fa-git:before{content:""}.fa-hacker-news:before,.fa-y-combinator-square:before,.fa-yc-square:before{content:""}.fa-tencent-weibo:before{content:""}.fa-qq:before{content:""}.fa-wechat:before,.fa-weixin:before{content:""}.fa-paper-plane:before,.fa-send:before{content:""}.fa-paper-plane-o:before,.fa-send-o:before{content:""}.fa-history:before{content:""}.fa-circle-thin:before{content:""}.fa-header:before{content:""}.fa-paragraph:before{content:""}.fa-sliders:before{content:""}.fa-share-alt:before{content:""}.fa-share-alt-square:before{content:""}.fa-bomb:before{content:""}.fa-futbol-o:before,.fa-soccer-ball-o:before{content:""}.fa-tty:before{content:""}.fa-binoculars:before{content:""}.fa-plug:before{content:""}.fa-slideshare:before{content:""}.fa-twitch:before{content:""}.fa-yelp:before{content:""}.fa-newspaper-o:before{content:""}.fa-wifi:before{content:""}.fa-calculator:before{content:""}.fa-paypal:before{content:""}.fa-google-wallet:before{content:""}.fa-cc-visa:before{content:""}.fa-cc-mastercard:before{content:""}.fa-cc-discover:before{content:""}.fa-cc-amex:before{content:""}.fa-cc-paypal:before{content:""}.fa-cc-stripe:before{content:""}.fa-bell-slash:before{content:""}.fa-bell-slash-o:before{content:""}.fa-trash:before{content:""}.fa-copyright:before{content:""}.fa-at:before{content:""}.fa-eyedropper:before{content:""}.fa-paint-brush:before{content:""}.fa-birthday-cake:before{content:""}.fa-area-chart:before{content:""}.fa-pie-chart:before{content:""}.fa-line-chart:before{content:""}.fa-lastfm:before{content:""}.fa-lastfm-square:before{content:""}.fa-toggle-off:before{content:""}.fa-toggle-on:before{content:""}.fa-bicycle:before{content:""}.fa-bus:before{content:""}.fa-ioxhost:before{content:""}.fa-angellist:before{content:""}.fa-cc:before{content:""}.fa-ils:before,.fa-shekel:before,.fa-sheqel:before{content:""}.fa-meanpath:before{content:""}.fa-buysellads:before{content:""}.fa-connectdevelop:before{content:""}.fa-dashcube:before{content:""}.fa-forumbee:before{content:""}.fa-leanpub:before{content:""}.fa-sellsy:before{content:""}.fa-shirtsinbulk:before{content:""}.fa-simplybuilt:before{content:""}.fa-skyatlas:before{content:""}.fa-cart-plus:before{content:""}.fa-cart-arrow-down:before{content:""}.fa-diamond:before{content:""}.fa-ship:before{content:""}.fa-user-secret:before{content:""}.fa-motorcycle:before{content:""}.fa-street-view:before{content:""}.fa-heartbeat:before{content:""}.fa-venus:before{content:""}.fa-mars:before{content:""}.fa-mercury:before{content:""}.fa-intersex:before,.fa-transgender:before{content:""}.fa-transgender-alt:before{content:""}.fa-venus-double:before{content:""}.fa-mars-double:before{content:""}.fa-venus-mars:before{content:""}.fa-mars-stroke:before{content:""}.fa-mars-stroke-v:before{content:""}.fa-mars-stroke-h:before{content:""}.fa-neuter:before{content:""}.fa-genderless:before{content:""}.fa-facebook-official:before{content:""}.fa-pinterest-p:before{content:""}.fa-whatsapp:before{content:""}.fa-server:before{content:""}.fa-user-plus:before{content:""}.fa-user-times:before{content:""}.fa-bed:before,.fa-hotel:before{content:""}.fa-viacoin:before{content:""}.fa-train:before{content:""}.fa-subway:before{content:""}.fa-medium:before{content:""}.fa-y-combinator:before,.fa-yc:before{content:""}.fa-optin-monster:before{content:""}.fa-opencart:before{content:""}.fa-expeditedssl:before{content:""}.fa-battery-4:before,.fa-battery-full:before{content:""}.fa-battery-3:before,.fa-battery-three-quarters:before{content:""}.fa-battery-2:before,.fa-battery-half:before{content:""}.fa-battery-1:before,.fa-battery-quarter:before{content:""}.fa-battery-0:before,.fa-battery-empty:before{content:""}.fa-mouse-pointer:before{content:""}.fa-i-cursor:before{content:""}.fa-object-group:before{content:""}.fa-object-ungroup:before{content:""}.fa-sticky-note:before{content:""}.fa-sticky-note-o:before{content:""}.fa-cc-jcb:before{content:""}.fa-cc-diners-club:before{content:""}.fa-clone:before{content:""}.fa-balance-scale:before{content:""}.fa-hourglass-o:before{content:""}.fa-hourglass-1:before,.fa-hourglass-start:before{content:""}.fa-hourglass-2:before,.fa-hourglass-half:before{content:""}.fa-hourglass-3:before,.fa-hourglass-end:before{content:""}.fa-hourglass:before{content:""}.fa-hand-grab-o:before,.fa-hand-rock-o:before{content:""}.fa-hand-paper-o:before,.fa-hand-stop-o:before{content:""}.fa-hand-scissors-o:before{content:""}.fa-hand-lizard-o:before{content:""}.fa-hand-spock-o:before{content:""}.fa-hand-pointer-o:before{content:""}.fa-hand-peace-o:before{content:""}.fa-trademark:before{content:""}.fa-registered:before{content:""}.fa-creative-commons:before{content:""}.fa-gg:before{content:""}.fa-gg-circle:before{content:""}.fa-tripadvisor:before{content:""}.fa-odnoklassniki:before{content:""}.fa-odnoklassniki-square:before{content:""}.fa-get-pocket:before{content:""}.fa-wikipedia-w:before{content:""}.fa-safari:before{content:""}.fa-chrome:before{content:""}.fa-firefox:before{content:""}.fa-opera:before{content:""}.fa-internet-explorer:before{content:""}.fa-television:before,.fa-tv:before{content:""}.fa-contao:before{content:""}.fa-500px:before{content:""}.fa-amazon:before{content:""}.fa-calendar-plus-o:before{content:""}.fa-calendar-minus-o:before{content:""}.fa-calendar-times-o:before{content:""}.fa-calendar-check-o:before{content:""}.fa-industry:before{content:""}.fa-map-pin:before{content:""}.fa-map-signs:before{content:""}.fa-map-o:before{content:""}.fa-map:before{content:""}.fa-commenting:before{content:""}.fa-commenting-o:before{content:""}.fa-houzz:before{content:""}.fa-vimeo:before{content:""}.fa-black-tie:before{content:""}.fa-fonticons:before{content:""}.fa-reddit-alien:before{content:""}.fa-edge:before{content:""}.fa-credit-card-alt:before{content:""}.fa-codiepie:before{content:""}.fa-modx:before{content:""}.fa-fort-awesome:before{content:""}.fa-usb:before{content:""}.fa-product-hunt:before{content:""}.fa-mixcloud:before{content:""}.fa-scribd:before{content:""}.fa-pause-circle:before{content:""}.fa-pause-circle-o:before{content:""}.fa-stop-circle:before{content:""}.fa-stop-circle-o:before{content:""}.fa-shopping-bag:before{content:""}.fa-shopping-basket:before{content:""}.fa-hashtag:before{content:""}.fa-bluetooth:before{content:""}.fa-bluetooth-b:before{content:""}.fa-percent:before{content:""}.fa-gitlab:before{content:""}.fa-wpbeginner:before{content:""}.fa-wpforms:before{content:""}.fa-envira:before{content:""}.fa-universal-access:before{content:""}.fa-wheelchair-alt:before{content:""}.fa-question-circle-o:before{content:""}.fa-blind:before{content:""}.fa-audio-description:before{content:""}.fa-volume-control-phone:before{content:""}.fa-braille:before{content:""}.fa-assistive-listening-systems:before{content:""}.fa-american-sign-language-interpreting:before,.fa-asl-interpreting:before{content:""}.fa-deaf:before,.fa-deafness:before,.fa-hard-of-hearing:before{content:""}.fa-glide:before{content:""}.fa-glide-g:before{content:""}.fa-sign-language:before,.fa-signing:before{content:""}.fa-low-vision:before{content:""}.fa-viadeo:before{content:""}.fa-viadeo-square:before{content:""}.fa-snapchat:before{content:""}.fa-snapchat-ghost:before{content:""}.fa-snapchat-square:before{content:""}.fa-pied-piper:before{content:""}.fa-first-order:before{content:""}.fa-yoast:before{content:""}.fa-themeisle:before{content:""}.fa-google-plus-circle:before,.fa-google-plus-official:before{content:""}.fa-fa:before,.fa-font-awesome:before{content:""}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}.slider .slide-wrap .slide .commentBlock,.sliderM,.sliderMob .slide-wrap .slide .commentBlock,.sliderUp{overflow:hidden}#callback{color:#222;background:#F7F6F6;padding:20px 30px;text-align:left;max-width:400px;margin:40px auto}.my-mfp-zoom-in .zoom-anim-dialog{opacity:0;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;-webkit-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8)}.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog{opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog{-webkit-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8);opacity:0}.my-mfp-zoom-in.mfp-bg{opacity:0;-webkit-transition:opacity .3s ease-out;transition:opacity .3s ease-out}.my-mfp-zoom-in.mfp-ready.mfp-bg{opacity:.8}.my-mfp-zoom-in.mfp-removing.mfp-bg{opacity:0}.my-mfp-slide-bottom .zoom-anim-dialog{opacity:0;-webkit-transition:all .2s ease-out;transition:all .2s ease-out;-webkit-transform:translateY(-20px) perspective(600px) rotateX(10deg);-ms-transform:translateY(-20px) perspective(600px) rotateX(10deg);transform:translateY(-20px) perspective(600px) rotateX(10deg)}.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog{opacity:1;-webkit-transform:translateY(0) perspective(600px) rotateX(0);-ms-transform:translateY(0) perspective(600px) rotateX(0);transform:translateY(0) perspective(600px) rotateX(0)}.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog{opacity:0;-webkit-transform:translateY(-10px) perspective(600px) rotateX(10deg);-ms-transform:translateY(-10px) perspective(600px) rotateX(10deg);transform:translateY(-10px) perspective(600px) rotateX(10deg)}.my-mfp-slide-bottom.mfp-bg{opacity:0;-webkit-transition:opacity .3s ease-out;transition:opacity .3s ease-out}.my-mfp-slide-bottom.mfp-ready.mfp-bg{opacity:.8}.my-mfp-slide-bottom.mfp-removing.mfp-bg{opacity:0}body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:RobotoRegular,sans-serif}.mail button,.menu{position:fixed;z-index:11}.container-fluid,.row{margin:0;padding:0}b,strong{font-family:RobotoBolt,sans-serif;font-weight:400}.button,h1,h2,h3,h4,h5,h6{font-family:RobotoCondenseBold,sans-serif;font-weight:700;text-transform:uppercase}button{background:0 0;border:none;outline:0}.menu{margin:2% 2% 2% 2.5%}.menu .menuIndices{display:none;background:#19092E;opacity:.75;-webkit-border-radius:10px;border-radius:10px;width:150%}.rightUp img,.slider .slide-wrap .slide .slideBg img{width:100%}.menu .menuIndices .menuPoint{border-bottom:1px solid silver}.menu .menuIndices .menuPoint h5{text-align:center;opacity:1;margin:0}.menu .menuIndices .menuPoint .first{margin:0}.menu .menuIndices .menuPoint .first h5{padding:10% 0 5%}.menu .menuIndices .menuPoint .second h5{padding:5% 10%}.menu .menuIndices .menuPoint .last h5{padding:5% 0 10%}.menu .menuIndices .close h5{text-align:center;padding:10% 0;margin:0}.mail button{margin:2% 2% 2% 93%}.bigDevice{background:url(../img/background.jpg);background-size:cover}.leftUp img{padding:500% 42% 0}.leftUp button{padding:50% 42% 0}.rightUp{padding:0;position:relative}.leftPointImg,.rightPointImg{position:absolute;padding:0 5%}.leftPointImg{bottom:10%}.leftPointImg h4{margin:0;float:left}.leftPointImg button{margin:0;float:right}.leftPointImg p{font-size:.8em;float:left}.rightPointImg{bottom:20%;right:0}.rightPointImg button{padding:0 5% 0 0;float:right}.rightPointImg p{padding-top:3%;float:right}.space{padding:2% 0 0 13%}.space h4{margin:0}.sliderUp{margin:2% 0 2% -10%}.slider .slide-wrap{float:left}.slider .slide-wrap .slide{background:#F6F0F0;margin:0 6%;color:#222}.slider .slide-wrap .slide .slideBg{position:relative}.slider .slide-wrap .slide .slideBg i{color:#fff;position:absolute;bottom:5%;right:28%;float:left}.slider .slide-wrap .slide .slideBg span{color:#fff;position:absolute;bottom:2%;right:14%;float:left}.slider .slide-wrap .slide .slideBg .triangleUp img{position:absolute;width:10%;left:0;bottom:0}.slider .slide-wrap .slide .textBlock{position:relative}.slider .slide-wrap .slide .textBlock .triangleDown img{position:absolute;width:10%;left:0;top:0}.slider .slide-wrap .slide .textBlock h4{padding:12% 10% 5%;margin:0}.slider .slide-wrap .slide .textBlock p{font-size:.8em;padding:0 10% 10%;margin:0;border-bottom:1px solid #A79C9C}.slider .slide-wrap .slide .commentBlock img{float:left;width:10%;margin:5% 3%}.slider .slide-wrap .slide .commentBlock p{float:left;font-size:.7em}.slider .slide-wrap .slide .commentBlock .rightComment{float:right;width:40%;border-left:1px solid #969393;padding:0 0 0 20%}.slider .slide-wrap .slide .commentBlock .rightComment button{margin:0;padding:25% 36%;background:#ccc;border-left:1px solid #969393}.arrowRight{margin:11% 0 0 5%}.mobileVersion{background-color:#003}.mobileVersion .leftMobUp{padding:0}.mobileVersion .leftMobUp img{margin:745% 0 0 50%;float:left}.mobileVersion .leftMobUp button{float:left;margin:80% 0 0 35%}.mobileVersion .RightMobUp{position:relative;padding:0}.mobileVersion .RightMobUp img{width:100%}.mobileVersion .RightMobUp .textImgUp{width:80%;position:absolute;top:43%;left:7%}.mobileVersion .RightMobUp .textImgUp h3{margin:0;padding:10% 0 0}.mobileVersion .RightMobUp .textImgUp p{font-size:.8em;margin:0;padding:5% 0}.mobileVersion .RightMobUp button{position:absolute;right:7%;bottom:4%}.sliderM{margin:5% 0}.sliderMob .slide-wrap{float:left}.sliderMob .slide-wrap .slide{background:#F6F0F0;margin:0 6%;color:#222}.sliderMob .slide-wrap .slide .slideBg{position:relative}.sliderMob .slide-wrap .slide .slideBg img{width:100%}.sliderMob .slide-wrap .slide .slideBg i{color:#fff;position:absolute;bottom:7%;right:25%;float:left}.sliderMob .slide-wrap .slide .slideBg span{color:#fff;position:absolute;bottom:5%;right:14%;float:left}.sliderMob .slide-wrap .slide .slideBg .triangleUp img{position:absolute;width:10%;left:0;bottom:0}.sliderMob .slide-wrap .slide .textBlock{position:relative}.sliderMob .slide-wrap .slide .textBlock .triangleDown img{position:absolute;width:10%;left:0;top:0}.sliderMob .slide-wrap .slide .textBlock h4{padding:8% 10% 3%;margin:0}.sliderMob .slide-wrap .slide .textBlock p{font-size:.9em;padding:0 10% 5%;margin:0;border-bottom:1px solid #A79C9C}.sliderMob .slide-wrap .slide .commentBlock img{float:left;width:10%;margin:5% 3%}.sliderMob .slide-wrap .slide .commentBlock p{float:left;font-size:.7em}.sliderMob .slide-wrap .slide .commentBlock .rightComment{float:right;width:40%;border-left:1px solid #969393;padding:0 0 0 20%}.sliderMob .slide-wrap .slide .commentBlock .rightComment button{margin:0;padding:25% 36%;background:#ccc;border-left:1px solid #969393}</style>
+	
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/_magnific-custom.css">
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/header.min.css">
+	
+</head>
+<body>
+	<!-- ************All device************ -->
+	<div class="bigDevice hidden-xs">
+		<div class="menu">
+			<button>
+				<img src="img/menu.png" alt="">
+			</button>
+			<div class="menuIndices">
+				<div class="menuPoint">
+					<div class="first">
+						<h5>first third</h5>
+					</div>
+					<div class="second">
+						<h5>second third</h5>
+					</div>
+					<div class="last">
+						<h5>last third</h5>
+					</div>
+				</div>
+				<div class="close">
+					<h5>close menu</h5>
+				</div>
+			</div>
+		</div>
+		<div class="mail">
+			<a href="#callback" class="popup-with-zoom-anim">
+				<button>
+					<img src="img/mail.png" alt="">
+				</button>
+			</a>
+		</div>
+		<div class="container-fluid">
+			<div class="row" >
+				<div class="leftUp col-sm-1">
+					<img src="img/text.png" alt="">
+					<button>
+						<i class="fa fa-angle-down"></i>
+					</button>
+				</div>
+				<div class="rightUp col-sm-11">
+					<img src="img/paint.jpg" alt="">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="leftPointImg col-sm-6">
+								<h4>humble beginings</h4>
+								<button>
+									<i class="fa fa-ellipsis-h"></i>
+								</button>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eaque dolor corporis, neque quod, autem veritatis nemo.</p>
+							</div>
+							<div class="rightPointImg col-sm-6">
+								<button>
+									<i class="fa fa-angle-right"></i>
+								</button>
+								<p>April 20th 2016</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="space col-sm-12">
+					<h4>pictures worth seeinnc</h4>
+				</div>
+			</div>
+		</div>
+		<!-- start sliderUP -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="sliderUp col-sm-11">
+					<div class="slider">
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider01.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>bliss texture</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider02.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>decayed</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider03.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>bliss texture</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider04.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>decayed</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrowRight col-sm-1">
+					<button>
+						<img src="img/arrowCarouselRight.png" alt="">
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- end slide -->
+		<div class="container-fluid">
+			<div class="row" >
+				<div class="leftUp col-sm-1">
+					<img src="img/text.png" alt="">
+					<button>
+						<i class="fa fa-angle-down"></i>
+					</button>
+				</div>
+				<div class="rightUp col-sm-11">
+					<img src="img/you.jpg" alt="">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="leftPointImg col-sm-6">
+								<h4>texture makes art</h4>
+								<button>
+									<i class="fa fa-ellipsis-h"></i>
+								</button>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eaque dolor corporis, neque quod, autem veritatis nemo.</p>
+							</div>
+							<div class="rightPointImg col-sm-6">
+								<button>
+									<i class="fa fa-angle-right"></i>
+								</button>
+								<p>April 20th 2016</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="leftMiddle col-sm-1">
+					<img src="img/jan2016.png" alt="">
+				</div>
+				<div class="rightMiddle col-sm-11">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="middleTextLeft  col-sm-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit consequuntur iusto rerum quos ab, molestiae. Quas adipisci fugiat placeat quo veniam deserunt, doloremque, laborum, impedit nostrum ipsum, dolores molestias! Possimus deleniti error tenetur quos eaque consectetur neque fugit, quis rerum doloremque ducimus vel, tempore non est saepe voluptas dolorem minima ea ipsa vitae, ex amet facilis debitis distinctio! Ipsa delectus dolorum nisi aut ratione, dolore facere eaque alias reprehenderit, eos aspernatur animi, architecto, atque. Laboriosam deserunt repudiandae quos, doloremque quidem architecto ipsum quasi, vel voluptate ea non quas voluptatum, blanditiis veritatis nihil! Odit velit dolorum distinctio blanditiis cupiditate, veniam eaque?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aliquam at iusto expedita consectetur reiciendis, inventore non! Dicta blanditiis aut, sit consectetur totam veritatis. Vel maiores mollitia cumque, incidunt sit delectus accusantium dolores fugit amet voluptatibus placeat cum, sapiente repellendus?</p>
+							</div>
+							<div class="middleTextRight col-sm-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel velit vero aliquid quisquam sequi voluptas minima aspernatur alias, earum excepturi hic ut dicta atque sed, numquam laboriosam quaerat molestias, corrupti culpa quas beatae commodi? Ea expedita, laborum officia quaerat nobis ipsam dolorum eum commodi repellat distinctio, sequi deleniti ratione, libero temporibus tempore quidem dicta. Molestiae nam provident, distinctio numquam doloremque et pariatur tenetur perferendis voluptatum esse quis eum nisi ad.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="space col-sm-12">
+					<h4>articles worth reading</h4>
+				</div>
+			</div>
+		</div>
+		<!-- ******middle slider -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="sliderUp col-sm-11">
+					<div class="sliderMiddle">
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider05.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>bliss texture</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider06.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>decayed</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider07.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>bliss texture</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="slideBg">
+								<img src="img/sliderUp/slider08.jpg" alt="">
+								<i class="fa fa-heart"></i>
+								<span>385</span>
+								<div class="triangleUp">
+									<img src="img/sliderUp/triangleUp.png" alt="">
+								</div>
+							</div>
+							<div class="textBlock">
+								<div class="triangleDown">
+									<img src="img/sliderUp/triangleDown.png" alt="">
+								</div>
+								<h4>decayed</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+							</div>
+							<div class="commentBlock">
+								<img src="img/sliderUp/commet.png" alt="">
+								<p>374 comments</p>
+								<div class="rightComment">
+									<button>
+										<i class="fa fa-ellipsis-h"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrowRightMiddle col-sm-1">
+					<button>
+						<img src="img/arrowCarouselRight.png" alt="">
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- ******end middle slider -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="footerLeftUp col-sm-1">
+					<img src="img/jan2016.png" alt="">
+				</div>
+				<div class="footerRightUp col-sm-10">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="footerUpText col-sm-3">
+								<h5>star-up resources</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora et, est sed quibusdam, deleniti tempore porro. Quae aliquam, sint amet?</p>
+							</div>
+							<div class="footerUpText col-sm-3">
+								<h5>training & funding</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora et, est sed quibusdam, deleniti tempore porro. Quae aliquam, sint amet?</p>
+							</div>
+							<div class="footerUpText col-sm-3">
+								<h5>connect</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora et, est sed quibusdam, deleniti tempore porro. Quae aliquam, sint amet?</p>
+							</div>
+							<div class="footerUpText col-sm-3">
+								<h5>communicate</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora et, est sed quibusdam, deleniti tempore porro. Quae aliquam, sint amet?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="footerImg col-sm-12">
+					<img src="img/footer.jpg" alt="">
+					<div class="textImgBlock">
+						<h5>textures by</h5>
+						<h3>jordan  hetzer</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, voluptates!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="footer">
+					<div class="about col-sm-offset-2 col-sm-3">
+						<h5>about</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro in vero nesciunt, et atque tempora facere architecto sequi iure fugiat quisquam, distinctio illo veritatis eius commodi exercitationem numquam. Esse, voluptatum!</p>
+					</div>
+					<div class="history col-sm-2">
+						<h5>history</h5>
+						<ul>
+							<li>Resources</li>
+							<li>Downloads & Updates</li>
+							<li>Manual</li>
+							<li>Tech Specs</li>
+							<li>System Status</li>
+							<li>Accessibility</li>
+						</ul>
+					</div>
+					<div class="contact col-sm-3">
+						<h5>contact</h5>
+						<p>Apple Store (Education Institutions)</p>
+						<p>1300-551-927</p>
+						<p>Apple Store (Small business)</p>
+						<p>1300-369-095</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="footerTextDown col-sm-12">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore in nulla laborum. Esse iure soluta odit inventore quae, error?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- ************Mobile version ********-->
+	<div class="mobileDevice visible-xs ">
+		<div class="menu">
+			<button>
+				<img src="img/menu.png" alt="">
+			</button>
+			<div class="menuIndices">
+				<div class="menuPoint">
+					<div class="first">
+						<h5>first third</h5>
+					</div>
+					<div class="second">
+						<h5>second third</h5>
+					</div>
+					<div class="last">
+						<h5>last third</h5>
+					</div>
+				</div>
+				<div class="close">
+					<h5>close menu</h5>
+				</div>
+			</div>
+		</div>
+		<div class="mobileVersion container-fluid">
+			<div class="row">
+				<div class="leftMobUp col-xs-1">
+					<img src="img/text.png" alt="">
+					<button>
+						<i class="fa fa-angle-down"></i>
+					</button>
+				</div>
+				<div class="RightMobUp col-xs-11">
+					<img src="img/backMobileUp.jpg" alt="">
+					<div class="textImgUp">
+						<h3>humble beginings</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maiores dolorem aliquid dicta deleniti, nam totam saepe placeat ipsum odio.</p>
+					</div>
+					<button>
+						<i class="fa fa-ellipsis-h fa-lg"></i>
+					</button>
+				</div>
+			</div>
+			<!-- ******slider MOBILE -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="sliderM col-sm-12">
+						<div class="sliderMob">
+							<div class="slide">
+								<div class="slideBg">
+									<img src="img/sliderUp/slider05.jpg" alt="">
+									<i class="fa fa-heart"></i>
+									<span>385</span>
+									<div class="triangleUp">
+										<img src="img/sliderUp/triangleUp.png" alt="">
+									</div>
+								</div>
+								<div class="textBlock">
+									<div class="triangleDown">
+										<img src="img/sliderUp/triangleDown.png" alt="">
+									</div>
+									<h4>bliss texture</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+								</div>
+								<div class="commentBlock">
+									<img src="img/sliderUp/commet.png" alt="">
+									<p>374 comments</p>
+									<div class="rightComment">
+										<button>
+											<i class="fa fa-ellipsis-h"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideBg">
+									<img src="img/sliderUp/slider06.jpg" alt="">
+									<i class="fa fa-heart"></i>
+									<span>385</span>
+									<div class="triangleUp">
+										<img src="img/sliderUp/triangleUp.png" alt="">
+									</div>
+								</div>
+								<div class="textBlock">
+									<div class="triangleDown">
+										<img src="img/sliderUp/triangleDown.png" alt="">
+									</div>
+									<h4>decayed</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+								</div>
+								<div class="commentBlock">
+									<img src="img/sliderUp/commet.png" alt="">
+									<p>374 comments</p>
+									<div class="rightComment">
+										<button>
+											<i class="fa fa-ellipsis-h"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideBg">
+									<img src="img/sliderUp/slider07.jpg" alt="">
+									<i class="fa fa-heart"></i>
+									<span>385</span>
+									<div class="triangleUp">
+										<img src="img/sliderUp/triangleUp.png" alt="">
+									</div>
+								</div>
+								<div class="textBlock">
+									<div class="triangleDown">
+										<img src="img/sliderUp/triangleDown.png" alt="">
+									</div>
+									<h4>bliss texture</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+								</div>
+								<div class="commentBlock">
+									<img src="img/sliderUp/commet.png" alt="">
+									<p>374 comments</p>
+									<div class="rightComment">
+										<button>
+											<i class="fa fa-ellipsis-h"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideBg">
+									<img src="img/sliderUp/slider08.jpg" alt="">
+									<i class="fa fa-heart"></i>
+									<span>385</span>
+									<div class="triangleUp">
+										<img src="img/sliderUp/triangleUp.png" alt="">
+									</div>
+								</div>
+								<div class="textBlock">
+									<div class="triangleDown">
+										<img src="img/sliderUp/triangleDown.png" alt="">
+									</div>
+									<h4>decayed</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam cumque explicabo, accusamus, tempora corrupti velit?</p>
+								</div>
+								<div class="commentBlock">
+									<img src="img/sliderUp/commet.png" alt="">
+									<p>374 comments</p>
+									<div class="rightComment">
+										<button>
+											<i class="fa fa-ellipsis-h"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ******end slider MOBILE -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="blockYou col-xs-12">
+						<img src="img/middleMobBack.jpg" alt="">
+						<div class="textYou">
+							<h3>texture makes art</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ad nisi culpa quasi vitae, ut.</p>
+						</div>
+					</div>
+					<div class="blockText col-xs-12">
+						<div class="bigText col-xs-12 ">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dignissimos cupiditate, architecto dolor eligendi voluptatibus optio, consectetur quasi dolorem maxime doloremque at nulla! Excepturi corrupti omnis ipsam accusamus dolor corporis blanditiis culpa officia. Molestias culpa quisquam numquam in, officia quod?</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas tenetur quis id incidunt libero eveniet dignissimos minus atque, dolore cupiditate!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, corrupti.</p>
+						</div>
+						<div class="littleText col-xs-6">
+							<h4>start-up resources</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis magnam tempore consectetur, quod esse illo commodi rem dignissimos, excepturi blanditiis.</p>
+						</div>
+						<div class="littleText col-xs-6">
+							<h4>training & funding</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, rerum, velit. Omnis, harum! Maiores repudiandae nam aliquid fuga harum sequi.</p>
+						</div>
+						<div class="littleText col-xs-6">
+							<h4>connect</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam iure animi quo, nulla harum sequi similique iusto voluptatem assumenda consequuntur.</p>
+						</div>
+						<div class="littleText col-xs-6">
+							<h4>communicate</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam iure animi quo, nulla harum sequi similique iusto voluptatem assumenda consequuntur.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="footerMob col-xs-12">
+						<img src="img/footerMobile.jpg" alt="">
+						<div class="textFooterMob">
+							<h4>textures by</h4>
+							<h2>jordan hetzer</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto rem, non eveniet.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="footerAbout col-xs-6">
+						<h4>about</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum libero quasi ex dolorem eum laboriosam dolores incidunt?</p>
+					</div>
+					<div class="footerHistory col-xs-6">
+						<h4>history</h4>
+						<ul>
+							<li>Resources</li>
+							<li>Downloads & Updates</li>
+							<li>Manuals</li>
+							<li>Tech Specs</li>
+							<li>System Status</li>
+						</ul>
+					</div>
+					<div class="footerMobText col-xs-12">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque totam nobis ad dolorem quia dolores doloribus natus culpa, tempora debitis nesciunt repellat inventore ea rem molestias officia quidem vel. Corporis laudantium aperiam saepe optio? Aliquam beatae vel praesentium distinctio eligendi animi eos in doloremque aperiam officiis, dolores vitae, reiciendis rem?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="hidden">
+		<form class="zoom-anim-dialog " id="callback">
+			<div class="success">
+				<p>Спасибо за заявку !</p>
+				<p>Мы свяжемся с вами в ближайшее время.</p>
+			</div>
+		<input type="hidden" name="projectName" value="pixture">
+		<input type="hidden" name="formSubject" value="Кликнули с сайта pixture">
+			<div class="formQuestion">
+				<h4>заказать званок</h4>
+				<label>
+					<span>Ваше имя:</span>
+					<input type="text" name="Имя" placeholder="Введите Ваше имя ...">
+				</label>
+				<label >
+					<span>Ваш телефон:</span>
+					<input type="text" name="Телефон" placeholder="Введите Ваш телефон ..." required>
+				</label>
+				<button class="buttonPopup">
+					<p>отправить</p>
+				</button>
+			</div>
+		</form>
+	</div>
+
+	<!-- Load Scripts Start -->
+	<script>var scr = {"scripts":[
+		{"src" : "js/libs.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+	<!-- Load Scripts End -->
+
+</body>
+</html>
